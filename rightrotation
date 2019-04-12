@@ -1,0 +1,27 @@
+#include <stdio.h>
+
+int main()
+{
+int n,arr[10],p;
+printf("enter the size of the array");
+scanf("%d",&n);
+for(int i=0;i<n;i++)
+{
+scanf("%d",&arr[i]);
+}
+printf("enter the times of  rotation");
+scanf("%d",&p);
+for(int i=0;i<p;i++)
+{
+int temp=arr[n-1];
+for(int j=0;j<n;j++)
+{
+arr[n-1-j]=arr[n-2-j];
+}
+arr[0]=temp;
+}
+for(int i=0;i<n;i++)
+{
+printf("%d",arr[i]);
+}
+}
